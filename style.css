@@ -868,6 +868,522 @@ TORNA SUB OLDAL
     font-size: 10px;
   }
 }
+/* 
+=========================================================
+
+
+  CSAPATOK SUB OLDAL 
+
+
+
+=========================================================
+ */
+#csapatoBody {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+ 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+ 
+  padding: 60px 5% 80px;
+}
+ 
+.maincsapatok {
+  width: min(700px, 100%);
+  min-height: 380px;
+ 
+  margin-top: 20px;
+  padding: 50px;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  background: linear-gradient(145deg, #202020, #111111);
+ 
+  border: 1px solid #333;
+  border-radius: 18px;
+ 
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+ 
+  position: relative;
+  overflow: hidden;
+}
+ 
+.maincsapatok::before {
+  content: "";
+ 
+  position: absolute;
+ 
+  top: 0;
+  left: 10%;
+ 
+  width: 80%;
+  height: 2px;
+ 
+  background: #ff6a00;
+ 
+  box-shadow: 0 0 25px rgba(255, 106, 0, 0.7);
+}
+ 
+#csapatBtn {
+  border: 2px solid #ff6a00;
+  outline: none;
+ 
+  padding: 13px 26px;
+ 
+  border-radius: 10px;
+ 
+  background: #ff6a00;
+  color: #050505;
+ 
+  font-size: 15px;
+  font-weight: 700;
+ 
+  cursor: pointer;
+ 
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+ 
+#csapatBtn:hover {
+  background: transparent;
+  color: #ff6a00;
+ 
+  transform: translateY(-2px);
+ 
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.25);
+}
+ 
+#csapatBtn:active {
+  transform: translateY(0);
+}
+ 
+.csapat-form {
+  width: min(850px, 100%);
+ 
+  margin: 20px auto 0;
+  padding: 40px;
+ 
+  background: linear-gradient(145deg, #1d1d1d, #101010);
+ 
+  border: 1px solid #333;
+  border-radius: 18px;
+ 
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+ 
+  position: relative;
+  overflow: hidden;
+}
+ 
+.csapat-form::before {
+  content: "";
+ 
+  position: absolute;
+ 
+  top: 0;
+  left: 0;
+ 
+  width: 100%;
+  height: 3px;
+ 
+  background: #ff6a00;
+ 
+  box-shadow: 0 0 20px rgba(255, 106, 0, 0.6);
+}
+ 
+.csapat-form-header {
+  margin-bottom: 35px;
+}
+ 
+.csapat-form-kicker {
+  display: block;
+ 
+  margin-bottom: 8px;
+ 
+  color: #ff6a00;
+ 
+  font-size: 11px;
+  font-weight: 800;
+ 
+  letter-spacing: 2.5px;
+}
+ 
+#csapatFormTitle {
+  margin: 0 0 8px;
+ 
+  color: #ffffff;
+ 
+  font-size: 30px;
+  font-weight: 800;
+}
+ 
+#csapatFormSubtitle {
+  max-width: 650px;
+ 
+  margin: 0;
+ 
+  color: #888;
+ 
+  font-size: 14px;
+  line-height: 1.6;
+}
+ 
+.csapat-form-fields {
+  display: flex;
+  flex-direction: column;
+ 
+  gap: 22px;
+}
+ 
+.csapat-input,
+.csapat-textarea {
+  width: 100%;
+ 
+  border: 1px solid #383838;
+  outline: none;
+ 
+  border-radius: 9px;
+ 
+  background: #111111;
+  color: #ffffff;
+ 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+ 
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+ 
+.csapat-input {
+  height: 46px;
+ 
+  padding: 0 14px;
+}
+ 
+.csapat-textarea {
+  min-height: 120px;
+ 
+  padding: 13px 14px;
+ 
+  resize: vertical;
+}
+ 
+.csapat-input::placeholder,
+.csapat-textarea::placeholder {
+  color: #555;
+}
+ 
+.csapat-input:hover,
+.csapat-textarea:hover {
+  border-color: #555;
+}
+ 
+.csapat-input:focus,
+.csapat-textarea:focus {
+  border-color: #ff6a00;
+ 
+  background: #151515;
+ 
+  box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.1);
+}
+ 
+.member-inputs {
+  margin-top: 5px;
+  padding-top: 25px;
+ 
+  display: grid;
+ 
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+ 
+  gap: 15px;
+ 
+  border-top: 1px solid #292929;
+}
+ 
+.member-inputs h3 {
+  grid-column: 1 / -1;
+ 
+  margin: 0 0 3px;
+ 
+  color: #ffffff;
+ 
+  font-size: 18px;
+  font-weight: 700;
+}
+ 
+.member-input {
+  padding: 15px;
+ 
+  background: #151515;
+ 
+  border: 1px solid #292929;
+  border-radius: 10px;
+ 
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+ 
+.member-input:hover {
+  border-color: #444;
+ 
+  background: #181818;
+ 
+  transform: translateY(-1px);
+}
+ 
+.member-label {
+  display: flex;
+ 
+  align-items: center;
+ 
+  gap: 8px;
+ 
+  margin-bottom: 8px;
+}
+ 
+.member-number {
+  width: 27px;
+  height: 27px;
+ 
+  display: inline-flex;
+ 
+  align-items: center;
+  justify-content: center;
+ 
+  flex-shrink: 0;
+ 
+  border-radius: 6px;
+ 
+  background: #242424;
+ 
+  color: #ff6a00;
+ 
+  font-size: 10px;
+  font-weight: 800;
+}
+ 
+.member-name {
+  width: 100%;
+}
+ 
+.csapat-primary-btn,
+.csapat-secondary-btn,
+.csapat-cancel-btn {
+  min-height: 44px;
+
+  padding: 0 18px;
+
+  border-radius: 9px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.csapat-secondary-btn {
+  border: 1px solid #444;
+ 
+  background: #202020;
+  color: #ddd;
+}
+ 
+.csapat-secondary-btn:hover {
+  border-color: #ff6a00;
+ 
+  background: #181818;
+  color: #ff6a00;
+}
+ 
+.csapat-primary-btn {
+  display: flex;
+ 
+  align-items: center;
+  justify-content: center;
+ 
+  gap: 8px;
+ 
+  margin-left: auto;
+ 
+  border: 2px solid #ff6a00;
+ 
+  background: #ff6a00;
+  color: #050505;
+}
+ 
+.csapat-primary-btn:hover {
+  background: transparent;
+  color: #ff6a00;
+ 
+  transform: translateY(-2px);
+ 
+  box-shadow: 0 8px 20px rgba(255, 106, 0, 0.25);
+}
+ 
+.csapat-primary-btn:active {
+  transform: translateY(0);
+}
+ 
+.csapat-cancel-btn {
+  border: 1px solid #333;
+ 
+  background: transparent;
+  color: #777;
+}
+ 
+.csapat-cancel-btn:hover {
+  border-color: #666;
+ 
+  color: #ddd;
+}
+ 
+/* 
+   LÉTREHOZOTT CSAPAT
+ */
+ 
+.csapat {
+  width: min(850px, 100%);
+ 
+  margin: 20px auto 0;
+  padding: 35px;
+ 
+  background: linear-gradient(145deg, #191919, #111111);
+ 
+  border: 1px solid #333;
+  border-radius: 18px;
+ 
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+ 
+  position: relative;
+  overflow: hidden;
+}
+ 
+.csapat::before {
+  content: "";
+ 
+  position: absolute;
+ 
+  top: 0;
+  left: 0;
+ 
+  width: 100%;
+  height: 3px;
+ 
+  background: #ff6a00;
+ 
+  box-shadow: 0 0 20px rgba(255, 106, 0, 0.5);
+}
+ 
+.csapat h2 {
+  margin: 0 0 15px;
+ 
+  color: #ffffff;
+ 
+  font-size: 30px;
+  font-weight: 800;
+}
+ 
+.csapat p {
+  margin-bottom: 8px;
+ 
+  color: #aaa;
+ 
+  line-height: 1.6;
+}
+ 
+.csapat strong {
+  color: #ddd;
+}
+ 
+.csapat h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+ 
+  color: #ff6a00;
+ 
+  font-size: 18px;
+}
+ 
+.csapat ul {
+  padding-left: 20px;
+ 
+  color: #ccc;
+ 
+  line-height: 1.8;
+ 
+  margin-bottom: 20px;
+}
+ 
+.csapat-delete-btn {
+  border: 1px solid #ff4444;
+  outline: none;
+ 
+  padding: 10px 18px;
+ 
+  border-radius: 8px;
+ 
+  background: transparent;
+  color: #ff4444;
+ 
+  font-size: 13px;
+  font-weight: 700;
+ 
+  cursor: pointer;
+ 
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+ 
+.csapat-delete-btn:hover {
+  background: #ff4444;
+  color: #050505;
+ 
+  transform: translateY(-2px);
+ 
+  box-shadow: 0 8px 20px rgba(255, 68, 68, 0.25);
+}
+ 
+.csapat-delete-btn:active {
+  transform: translateY(0);
+}
+ 
+.csapatok-list {
+  width: 100%;
+ 
+  display: grid;
+ 
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+ 
+  gap: 20px;
+ 
+  margin: 0 auto;
+  padding: 20px;
+ 
+  max-width: 1200px;
+}
+
+
 
 /* STATISZTIKAK SUB OLDAL */
 
