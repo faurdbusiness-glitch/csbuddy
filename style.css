@@ -14,12 +14,16 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  width: 12px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #000;
-  clip-path: inset(-220%);
-  animation: l28 2s infinite linear;
+
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #ff6a00 90%, #0000);
+  background:
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
 }
 
 body.loading::before {
@@ -34,88 +38,11 @@ body.loading {
   overflow: hidden;
 }
 
-@keyframes l28 {
-  0% {
-    box-shadow:
-      0 0 0 0,
-      40px 0,
-      -40px 0,
-      0 40px,
-      0 -40px;
-  }
-  10% {
-    box-shadow:
-      0 0 0 0,
-      12px 0,
-      -40px 0,
-      0 40px,
-      0 -40px;
-  }
-  20% {
-    box-shadow:
-      0 0 0 4px,
-      0px 0,
-      -40px 0,
-      0 40px,
-      0 -40px;
-  }
-  30% {
-    box-shadow:
-      0 0 0 4px,
-      0px 0,
-      -12px 0,
-      0 40px,
-      0 -40px;
-  }
-  40% {
-    box-shadow:
-      0 0 0 8px,
-      0px 0,
-      0px 0,
-      0 40px,
-      0 -40px;
-  }
-  50% {
-    box-shadow:
-      0 0 0 8px,
-      0px 0,
-      0px 0,
-      0 12px,
-      0 -40px;
-  }
-  60% {
-    box-shadow:
-      0 0 0 12px,
-      0px 0,
-      0px 0,
-      0 0px,
-      0 -40px;
-  }
-  70% {
-    box-shadow:
-      0 0 0 12px,
-      0px 0,
-      0px 0,
-      0 0px,
-      0 -12px;
-  }
-  80% {
-    box-shadow:
-      0 0 0 16px,
-      0px 0,
-      0px 0,
-      0 0px,
-      0 0px;
-  }
-  90%,
-  100% {
-    box-shadow:
-      0 0 0 0,
-      40px 0,
-      -40px 0,
-      0 40px,
-      0 -40px;
-  }
+@keyframes l3 {
+  20% { background-position: 0%   0%, 50%  50%, 100%  50% }
+  40% { background-position: 0% 100%, 50%   0%, 100%  50% }
+  60% { background-position: 0%  50%, 50% 100%, 100%   0% }
+  80% { background-position: 0%  50%, 50%  50%, 100% 100% }
 }
 
 body {
@@ -147,16 +74,40 @@ header #csbuddynav {
   font-size: 30px;
   font-weight: 800;
   letter-spacing: 1px;
-  color: #ff6a00;
   text-decoration: none;
+
+  background: linear-gradient(
+    90deg,
+    #2626ec 0%,
+    #2626ec 30%,
+    #ff6a00 30%,
+    #ff6a00 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  transition: filter 0.25s ease;
+}
+
+
+header #csbuddynav:hover {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  filter: brightness(1.25) drop-shadow(0 0 8px rgba(255, 106, 0, 0.45));
 }
 
 header #csbuddynav:hover {
   font-size: 30px;
   font-weight: 800;
   letter-spacing: 1px;
-  color: #ff9f5a;
   text-decoration: none;
+
+  filter: brightness(1.25) drop-shadow(0 0 8px rgba(255, 106, 0, 0.45));
 }
 
 nav {
@@ -1396,6 +1347,8 @@ TORNA SUB OLDAL
   margin: 80px auto;
   padding: 40px;
   text-align: center;
+  background: linear-gradient(145deg, #1d1d1d, #101010);
+  border-radius: 18px;
 }
 
 .demo-upload h2 {
