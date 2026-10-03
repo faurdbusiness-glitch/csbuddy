@@ -1,32 +1,37 @@
 <!doctype html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSBuddy - Tournaments</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="common.js" defer></script>
-    <script src="torna.js" defer></script>
-  </head>
-  <body>
-    <div id="loader" class="loader"></div>
-    <header>
-      <a href="./index.html" id="csbuddynav"><h1>CSBuddy</h1></a>
-      <nav>
-        <a class="nav-link" href="./torna.html">Tornák</a>
-        <a class="nav-link" href="./csapatok.html">Csapatok</a>
-        <a class="nav-link" href="./statisztikak.html">Statisztikák</a>
-        <button id="loginBtn">Bejelentkezés</button>
-      </nav>
-    </header>
-    <main>
-      <div id="tornaBody">
-        <div class="maintorna">
-          <button id="tornaBtn" onclick="createTorna()">
-            Torna létrehozása
-          </button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSBuddy - Tournaments</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
+  <script src="torna.js" defer></script>
+</head>
+
+<body>
+  <div id="loader" class="loader"></div>
+  <header>
+    <a href="./index.html" id="csbuddynav">
+      <span class="logo-cs">CS</span><span class="logo-buddy">Buddy</span>
+    </a>
+    <nav>
+      <a class="nav-link" href="./torna.html">Tornák</a>
+      <a class="nav-link" href="./csapatok.html">Csapatok</a>
+      <a class="nav-link" href="./statisztikak.html">Statisztikák</a>
+      <button id="loginBtn">Bejelentkezés</button>
+    </nav>
+  </header>
+  <main>
+    <div id="tornaBody">
+      <div class="maintorna">
+        <button id="tornaBtn" onclick="createTorna()">
+          Torna létrehozása
+        </button>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>

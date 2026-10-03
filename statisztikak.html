@@ -1,47 +1,52 @@
 <!doctype html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSBuddy - Stats</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="common.js" defer></script>
-  </head>
-  <body>
-    <div id="loader" class="loader"></div>
 
-    <header>
-      <a href="./index.html" id="csbuddynav"><h1>CSBuddy</h1></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSBuddy - Stats</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
+</head>
 
-      <nav>
-        <a class="nav-link" href="./torna.html">Tornák</a>
-        <a class="nav-link" href="./csapatok.html">Csapatok</a>
-        <a class="nav-link" href="./statisztikak.html">Statisztikák</a>
-        <button id="loginBtn">Bejelentkezés</button>
-      </nav>
-    </header>
+<body>
+  <div id="loader" class="loader"></div>
 
-    <main>
-      <section class="demo-upload">
-        <h2>Meccs statisztikák</h2>
+  <header>
+    <a href="./index.html" id="csbuddynav">
+      <span class="logo-cs">CS</span><span class="logo-buddy">Buddy</span>
+    </a>
 
-        <p>
-          Töltsd fel a Counter-Strike meccsed <strong>.dem</strong> fájlját, és
-          nézd meg a mérkőzés részletes statisztikáit.
-        </p>
+    <nav>
+      <a class="nav-link" href="./torna.html">Tornák</a>
+      <a class="nav-link" href="./csapatok.html">Csapatok</a>
+      <a class="nav-link" href="./statisztikak.html">Statisztikák</a>
+      <button id="loginBtn">Bejelentkezés</button>
+    </nav>
+  </header>
 
-        <label for="demoFile" class="upload-label">
-          <span class="upload-icon">📁</span>
-          <span class="upload-title">.dem fájl feltöltése</span>
-          <span class="upload-subtitle">
-            Kattints ide vagy húzd ide a demo fájlt
-          </span>
-        </label>
+  <main>
+    <section class="demo-upload">
+      <h2>Meccs statisztikák</h2>
 
-        <input type="file" id="demoFile" name="demoFile" accept=".dem" hidden />
+      <p>
+        Töltsd fel a Counter-Strike meccsed <strong>.dem</strong> fájlját, és
+        nézd meg a mérkőzés részletes statisztikáit.
+      </p>
 
-        <p id="selectedFile" class="selected-file"></p>
-      </section>
-    </main>
-  </body>
+      <label for="demoFile" class="upload-label">
+        <span class="upload-icon">📁</span>
+        <span class="upload-title">.dem fájl feltöltése</span>
+        <span class="upload-subtitle">
+          Kattints ide vagy húzd ide a demo fájlt
+        </span>
+      </label>
+
+      <input type="file" id="demoFile" name="demoFile" accept=".dem" hidden />
+
+      <p id="selectedFile" class="selected-file"></p>
+    </section>
+  </main>
+</body>
+
 </html>

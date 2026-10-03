@@ -47,8 +47,8 @@ body.loading {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #2626ec 50%, orange 50%);
-  backdrop-filter: blur(2px);
+  background: linear-gradient(135deg, #2626ec 0%, #2626ec 35%, #ff6a00 65%, #ff6a00 100%);
+  background-attachment: fixed;
   color: #ffffff;
   min-height: 100vh;
 }
@@ -71,43 +71,27 @@ header {
 }
 
 header #csbuddynav {
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
   text-decoration: none;
 
-  background: linear-gradient(
-    90deg,
-    #2626ec 0%,
-    #2626ec 30%,
-    #ff6a00 30%,
-    #ff6a00 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-
-  transition: filter 0.25s ease;
-}
-
-
-header #csbuddynav:hover {
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-decoration: none;
-
-  filter: brightness(1.25) drop-shadow(0 0 8px rgba(255, 106, 0, 0.45));
+  transition: filter 0.2s ease;
 }
 
 header #csbuddynav:hover {
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-decoration: none;
+  filter: brightness(1.2);
+}
 
-  filter: brightness(1.25) drop-shadow(0 0 8px rgba(255, 106, 0, 0.45));
+.logo-cs {
+  color: #2626ec;
+}
+
+.logo-buddy {
+  color: #ff6a00;
 }
 
 nav {
